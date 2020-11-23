@@ -1,0 +1,542 @@
+-- Gui to Lua
+-- Version: 3
+
+-- Instances:
+
+local Killer = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local IgnoreFrame = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local Mossed = Instance.new("ImageLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local Scripts1 = Instance.new("Frame")
+local TurnOffMags = Instance.new("TextButton")
+local TurnOnMags = Instance.new("TextButton")
+local TurnOnBallTP = Instance.new("TextButton")
+local TurnOffBallTP = Instance.new("TextButton")
+local MainUI = Instance.new("ImageLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local Games1 = Instance.new("Frame")
+local Mossed_2 = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+
+--Properties:
+
+Killer.Name = "Killer"
+Killer.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Killer.ResetOnSpawn = false
+
+Frame.Name = "Frame"
+Frame.Parent = Killer
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.BackgroundTransparency = 1
+Frame.Position = UDim2.new(0.106811143, 0, 0.185585588, 0)
+Frame.Size = UDim2.new(0, 508, 0, 349)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.38188976, 0, 0.0315186232, 0)
+TextLabel.Size = UDim2.new(0, 120, 0, 50)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "Killer"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0.429133832, 0, 0.174785107, 0)
+TextLabel_2.Size = UDim2.new(0, 71, 0, 50)
+TextLabel_2.Font = Enum.Font.GothamBlack
+TextLabel_2.Text = "HUB"
+TextLabel_2.TextColor3 = Color3.new(0, 0.666667, 1)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.172933862, 0, 0.426057577, 0)
+TextBox.Size = UDim2.new(0, 310, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.new(1, 1, 1)
+TextBox.PlaceholderText = "Key goes here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.new(1, 1, 1)
+TextBox.TextScaled = true
+TextBox.TextSize = 14
+TextBox.TextWrapped = true
+
+IgnoreFrame.Name = "IgnoreFrame"
+IgnoreFrame.Parent = Frame
+IgnoreFrame.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+IgnoreFrame.BackgroundTransparency = 1
+IgnoreFrame.Position = UDim2.new(0.267178297, 0, 0.654854298, 0)
+IgnoreFrame.Size = UDim2.new(0, 235, 0, 63)
+IgnoreFrame.Image = "rbxassetid://3570695787"
+IgnoreFrame.ImageColor3 = Color3.new(0, 0.666667, 1)
+IgnoreFrame.ScaleType = Enum.ScaleType.Slice
+IgnoreFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextButton.Parent = IgnoreFrame
+TextButton.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+TextButton.BackgroundTransparency = 1
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(-0.00337168574, 0, -0.00881975889, 0)
+TextButton.Size = UDim2.new(0, 235, 0, 63)
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "Submit Key"
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+
+Mossed.Name = "Mossed"
+Mossed.Parent = Killer
+Mossed.BackgroundColor3 = Color3.new(1, 1, 1)
+Mossed.BackgroundTransparency = 1
+Mossed.Position = UDim2.new(0.106811143, 0, 0.185585588, 0)
+Mossed.Size = UDim2.new(0, 508, 0, 349)
+Mossed.Visible = false
+Mossed.Image = "rbxassetid://3570695787"
+Mossed.ImageColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Mossed.ScaleType = Enum.ScaleType.Slice
+Mossed.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextLabel_3.Parent = Mossed
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0.38188976, 0, 0.0315186232, 0)
+TextLabel_3.Size = UDim2.new(0, 120, 0, 50)
+TextLabel_3.Font = Enum.Font.GothamBlack
+TextLabel_3.Text = "Killer"
+TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = Mossed
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.Position = UDim2.new(0.429133832, 0, 0.174785107, 0)
+TextLabel_4.Size = UDim2.new(0, 71, 0, 50)
+TextLabel_4.Font = Enum.Font.GothamBlack
+TextLabel_4.Text = "HUB"
+TextLabel_4.TextColor3 = Color3.new(0, 0.666667, 1)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14
+TextLabel_4.TextWrapped = true
+
+Scripts1.Name = "Scripts1"
+Scripts1.Parent = Mossed
+Scripts1.BackgroundColor3 = Color3.new(1, 1, 1)
+Scripts1.BackgroundTransparency = 1
+Scripts1.Position = UDim2.new(0.0472440943, 0, 0.343839556, 0)
+Scripts1.Size = UDim2.new(0, 100, 0, 100)
+
+TurnOffMags.Name = "TurnOffMags"
+TurnOffMags.Parent = Scripts1
+TurnOffMags.BackgroundColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+TurnOffMags.BorderSizePixel = 0
+TurnOffMags.Position = UDim2.new(0.0433070958, 0, 0.089627564, 0)
+TurnOffMags.Size = UDim2.new(0, 105, 0, 91)
+TurnOffMags.Visible = false
+TurnOffMags.Font = Enum.Font.Jura
+TurnOffMags.Text = "Mags is On"
+TurnOffMags.TextColor3 = Color3.new(1, 1, 1)
+TurnOffMags.TextScaled = true
+TurnOffMags.TextSize = 25
+TurnOffMags.TextWrapped = true
+
+TurnOnMags.Name = "TurnOnMags"
+TurnOnMags.Parent = Scripts1
+TurnOnMags.BackgroundColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+TurnOnMags.BorderSizePixel = 0
+TurnOnMags.Position = UDim2.new(0.0433070958, 0, 0.089627564, 0)
+TurnOnMags.Size = UDim2.new(0, 105, 0, 91)
+TurnOnMags.Font = Enum.Font.Jura
+TurnOnMags.Text = "Mags is Off"
+TurnOnMags.TextColor3 = Color3.new(1, 1, 1)
+TurnOnMags.TextScaled = true
+TurnOnMags.TextSize = 25
+TurnOnMags.TextWrapped = true
+
+TurnOnBallTP.Name = "TurnOnBallTP"
+TurnOnBallTP.Parent = Scripts1
+TurnOnBallTP.BackgroundColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+TurnOnBallTP.BorderSizePixel = 0
+TurnOnBallTP.Position = UDim2.new(1.77330709, 0, 0.089627564, 0)
+TurnOnBallTP.Size = UDim2.new(0, 105, 0, 91)
+TurnOnBallTP.Font = Enum.Font.Jura
+TurnOnBallTP.Text = "Tp to ball is Off"
+TurnOnBallTP.TextColor3 = Color3.new(1, 1, 1)
+TurnOnBallTP.TextScaled = true
+TurnOnBallTP.TextSize = 25
+TurnOnBallTP.TextWrapped = true
+
+TurnOffBallTP.Name = "TurnOffBallTP"
+TurnOffBallTP.Parent = Scripts1
+TurnOffBallTP.BackgroundColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+TurnOffBallTP.BorderSizePixel = 0
+TurnOffBallTP.Position = UDim2.new(1.77330709, 0, 0.089627564, 0)
+TurnOffBallTP.Size = UDim2.new(0, 105, 0, 91)
+TurnOffBallTP.Visible = false
+TurnOffBallTP.Font = Enum.Font.Jura
+TurnOffBallTP.Text = "Tp to ball is On"
+TurnOffBallTP.TextColor3 = Color3.new(1, 1, 1)
+TurnOffBallTP.TextScaled = true
+TurnOffBallTP.TextSize = 25
+TurnOffBallTP.TextWrapped = true
+
+MainUI.Name = "MainUI"
+MainUI.Parent = Killer
+MainUI.BackgroundColor3 = Color3.new(1, 1, 1)
+MainUI.BackgroundTransparency = 1
+MainUI.Position = UDim2.new(0.106811143, 0, 0.185585588, 0)
+MainUI.Size = UDim2.new(0, 508, 0, 349)
+MainUI.Visible = false
+MainUI.Image = "rbxassetid://3570695787"
+MainUI.ImageColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+MainUI.ScaleType = Enum.ScaleType.Slice
+MainUI.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextLabel_5.Parent = MainUI
+TextLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_5.BackgroundTransparency = 1
+TextLabel_5.Position = UDim2.new(0.38188976, 0, 0.0315186232, 0)
+TextLabel_5.Size = UDim2.new(0, 120, 0, 50)
+TextLabel_5.Font = Enum.Font.GothamBlack
+TextLabel_5.Text = "Killer"
+TextLabel_5.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14
+TextLabel_5.TextWrapped = true
+
+TextLabel_6.Parent = MainUI
+TextLabel_6.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_6.BackgroundTransparency = 1
+TextLabel_6.Position = UDim2.new(0.429133832, 0, 0.174785107, 0)
+TextLabel_6.Size = UDim2.new(0, 71, 0, 50)
+TextLabel_6.Font = Enum.Font.GothamBlack
+TextLabel_6.Text = "HUB"
+TextLabel_6.TextColor3 = Color3.new(0, 0.666667, 1)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14
+TextLabel_6.TextWrapped = true
+
+Games1.Name = "Games1"
+Games1.Parent = MainUI
+Games1.BackgroundColor3 = Color3.new(1, 1, 1)
+Games1.BackgroundTransparency = 1
+Games1.Position = UDim2.new(0.0472440943, 0, 0.343839556, 0)
+Games1.Size = UDim2.new(0, 100, 0, 100)
+
+Mossed_2.Name = "Mossed"
+Mossed_2.Parent = Games1
+Mossed_2.BackgroundColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+Mossed_2.Position = UDim2.new(0.0433070958, 0, 0.369627535, 0)
+Mossed_2.Size = UDim2.new(0, 105, 0, 91)
+Mossed_2.Font = Enum.Font.Jura
+Mossed_2.Text = "Mossed!"
+Mossed_2.TextColor3 = Color3.new(1, 1, 1)
+Mossed_2.TextScaled = true
+Mossed_2.TextSize = 25
+Mossed_2.TextWrapped = true
+
+UIListLayout.Parent = Games1
+UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+-- Scripts:
+
+local function KURFO_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local keys = {
+			"212",
+			"213"
+		}
+	
+	
+		if script.Parent.Parent.Parent.TextBox.Text == "fusionwinning" then
+			script.Parent.Parent.TextButton.Text = "Reading Key.."
+			wait(2)
+			script.Parent.Parent.TextButton.Text = "Authenticating User...."
+			wait(2)
+			script.Parent.Parent.TextButton.Text = "Granted. Have fun!"
+			wait(3)
+			script.Parent.Parent.Parent.Parent.MainUI.Visible = true
+			wait(0)
+			script.Parent.Parent.Parent.Parent.Frame.Visible = false
+		else
+			script.Parent.Parent.TextButton.Text = "Reading Key.."
+			wait(2)
+			script.Parent.Parent.TextButton.Text = "Key is invalid!"
+			wait(4)
+			script.Parent.Parent.TextButton.Text = "Submit Key"
+		end
+	
+	end)
+end
+coroutine.wrap(KURFO_fake_script)()
+local function HORGLVN_fake_script() -- Frame.Script 
+	local script = Instance.new('Script', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local poopoo = script.Parent
+	
+	local noob
+	local baba
+	local babya
+	local yayaya
+	
+	local function update(input)
+		local delta = input.Position - babya
+		poopoo.Position = poopoo:TweenPosition(UDim2.new(yayaya.X.Scale, yayaya.X.Offset + delta.X, yayaya.Y.Scale, yayaya.Y.Offset + delta.Y), 'Out', 'Quart', 4, true); -- drag speed
+	end
+	
+	poopoo.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			noob = true
+			babya = input.Position
+			yayaya = poopoo.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					noob = false
+				end
+			end)
+		end
+	end)
+	
+	poopoo.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			baba = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == baba and noob then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(HORGLVN_fake_script)()
+local function CGRHZK_fake_script() -- TurnOffMags.Script 
+	local script = Instance.new('Script', TurnOffMags)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local Enabled = false
+	
+		if Enabled == true then
+	
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Backtracked#0590";
+				Text = "Mags Loaded (R to mag)";
+				Icon = "rbxassetid://ExampleIcon";
+				Duration = 7;
+			})
+		end
+		script.Parent.Parent.TurnOffMags.Visible = false
+		script.Parent.Parent.TurnOnMags.Visible = true
+		
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Backtracked#0590";
+			Text = "Mags Unloaded";
+			Icon = "rbxassetid://ExampleIcon";
+			Duration = 3;
+		})
+	end)
+end
+coroutine.wrap(CGRHZK_fake_script)()
+local function WBJKQ_fake_script() -- TurnOnMags.Script 
+	local script = Instance.new('Script', TurnOnMags)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local Enabled = true
+	
+		if Enabled == true then
+			game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+				if key == "r" then 
+					for i,v in pairs(workspace:GetChildren())do
+						if v:IsA("Part") and v.Name == "Football"then
+							wait()
+							workspace.Football.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+						end
+					end
+				end
+			end)
+	
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Backtracked#0590";
+				Text = "Mags Loaded (R to mag)";
+				Icon = "rbxassetid://ExampleIcon";
+				Duration = 7;
+			})
+		end
+		script.Parent.Parent.TurnOffMags.Visible = true
+		script.Parent.Parent.TurnOnMags.Visible = false
+	end)
+end
+coroutine.wrap(WBJKQ_fake_script)()
+local function ABYZ_fake_script() -- TurnOnBallTP.Script 
+	local script = Instance.new('Script', TurnOnBallTP)
+
+	script.Parent.MouseButton1Down:Connect(function()
+	
+		getgenv().Hype = true; -- Change this to false to disable it!
+	
+		if getgenv().Hype == true then
+			game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+				if key == "z" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.Position = game.Workspace.Football.Position
+				end	
+			end)
+		end
+		script.Parent.Parent.TurnOnBallTP.Visible = false
+		wait(0)
+		script.Parent.Parent.TurnOffBallTP.Visible = true
+		
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Backtracked#0590";
+			Text = "TP to ball loaded (Z to TP)";
+			Icon = "rbxassetid://ExampleIcon";
+			Duration = 7;
+		})
+	end)
+end
+coroutine.wrap(ABYZ_fake_script)()
+local function HITYXZX_fake_script() -- TurnOffBallTP.Script 
+	local script = Instance.new('Script', TurnOffBallTP)
+
+	script.Parent.MouseButton1Down:Connect(function()
+	
+		getgenv().Hype = false; -- Change this to false to disable it!
+	
+		if getgenv().Hype == true then
+			game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+				if key == "z" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.Position = game.Workspace.Football.CFrame
+				end	
+			end)
+		end
+		script.Parent.Parent.TurnOnBallTP.Visible = true
+		wait(0)
+		script.Parent.Parent.TurnOffBallTP.Visible = false
+	end)
+end
+coroutine.wrap(HITYXZX_fake_script)()
+local function LWWW_fake_script() -- Mossed.Script 
+	local script = Instance.new('Script', Mossed)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local poopoo = script.Parent
+	
+	local noob
+	local baba
+	local babya
+	local yayaya
+	
+	local function update(input)
+		local delta = input.Position - babya
+		poopoo.Position = poopoo:TweenPosition(UDim2.new(yayaya.X.Scale, yayaya.X.Offset + delta.X, yayaya.Y.Scale, yayaya.Y.Offset + delta.Y), 'Out', 'Quart', 4, true); -- drag speed
+	end
+	
+	poopoo.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			noob = true
+			babya = input.Position
+			yayaya = poopoo.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					noob = false
+				end
+			end)
+		end
+	end)
+	
+	poopoo.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			baba = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == baba and noob then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(LWWW_fake_script)()
+local function GTELOI_fake_script() -- Mossed_2.Script 
+	local script = Instance.new('Script', Mossed_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.Parent.MainUI.Visible = false
+		wait(0)
+		script.Parent.Parent.Parent.Parent.Mossed.Visible = true
+	end)
+end
+coroutine.wrap(GTELOI_fake_script)()
+local function XXLBXG_fake_script() -- MainUI.Script 
+	local script = Instance.new('Script', MainUI)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local poopoo = script.Parent
+	
+	local noob
+	local baba
+	local babya
+	local yayaya
+	
+	local function update(input)
+		local delta = input.Position - babya
+		poopoo.Position = poopoo:TweenPosition(UDim2.new(yayaya.X.Scale, yayaya.X.Offset + delta.X, yayaya.Y.Scale, yayaya.Y.Offset + delta.Y), 'Out', 'Quart', 4, true); -- drag speed
+	end
+	
+	poopoo.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			noob = true
+			babya = input.Position
+			yayaya = poopoo.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					noob = false
+				end
+			end)
+		end
+	end)
+	
+	poopoo.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			baba = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == baba and noob then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(XXLBXG_fake_script)()
